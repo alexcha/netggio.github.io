@@ -1,0 +1,72 @@
+I";<p>syslog로  원격지의 시스템 로그를 받아 볼수 있지만…</p>
+
+<p>로그를 보내는 클라이언트 수가 많은 경우 골치 아파진다.</p>
+
+<p>날짜별.. 호스트별… 구분해서 저장해야 관리가 되는데 syslog로는 역부족 하다.</p>
+
+<p>syslog-ng가  이러한 모든 고민을 해결해준다.</p>
+
+<p>시스템 log서버를 별도로 만들려고 하는경우  로그를 받는 로그서버에만 <br />
+syslog.-ng를 설치 해주면 된다  편하게 rpm으로~ ㄱㄱㄱ.</p>
+
+<p>**– 클라이언트 서버 설정 –<br />
+**<br />
+우선  로그를 보내는 클라이언트 서버의  /etc/syslog.conf 열어서 <br />
+아래의 부분 추가 후 syslog  리스타트</p>
+
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #e4e4e4; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 10px">
+  *.* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; @로그서버 IP
+</div>
+
+<p>**</p>
+
+<p>– 로그 서버 설정 –<br />
+**<br />
+우선 아래의 syslog-ng 설치 [ rhel4 /centos4  기준]<br />
+&lt;A href=”ftp://ftp.pbone.net/mirror/ftp.silfreed.net/repo/rhel/4/x86_64/silfreednet/RPMS/syslog-ng-1.6.8-1.el4.i386.rpm” target=_blank&gt;<a href="ftp://ftp.pbone.net/mirror/ftp.silfreed.net/repo/rhel/4/x86_64/silfreednet/RPMS/syslog-ng-1.6.8-1.el4.i386.rpm"><ins>&lt;FONT color=#0000ff&gt;ftp://ftp.pbone.net/mirror/ftp.silfreed.net/repo/rhel/4/x86_64/silfreednet/RPMS/syslog-ng-1.6.8-1.el4.i386.rpm&lt;/FONT&gt;</ins></a><br />
+&lt;/A&gt;<br />
+기존의  syslog 지우지 않고 설치 해도 무관하다.</p>
+
+<p>/etc/syslog-ng/syslog-ng.conf 파일 백업 해 두고 아래의 내용으로 변경 한다</p>
+
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #e4e4e4; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 10px">
+  options { sync (0);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; time_reopen (10);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; log_fifo_size (1000);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; long_hostnames (off);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; use_dns (no);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; use_fqdn (no);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; create_dirs (no);<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; keep_hostname (yes);<br />&nbsp; &nbsp; &nbsp; &nbsp; };<br /><br />source local {<br />&nbsp; &nbsp; &nbsp; &nbsp; unix-stream(&#8220;/dev/log&#8221;);<br />&nbsp; &nbsp; &nbsp; &nbsp; internal();<br />};<br /> 
+  
+  <p>
+    source LOG_ZONE &nbsp;{<br />&nbsp; &nbsp; &nbsp; &nbsp; udp(ip(0.0.0.0) port(514)); &nbsp;&nbsp; # 포트는 바꾸고 싶은걸로 바꾸도 무관
+  </p>
+  
+  <br /> 
+  
+  <p>
+    };
+  </p>
+  
+  <br /> 
+  
+  <p>
+    destination hosts {<br />&nbsp; &nbsp; &nbsp; &nbsp; file(&#8220;/home/SYSTEM_LOG/$YEAR/$MONTH/$DAY/$HOST/$FACILITY&#8221;<br />&nbsp; &nbsp; &nbsp; &nbsp; owner(root) group(root) perm(0600) dir_perm(0700)<br />create_dirs(yes));<br />};
+  </p>
+  
+  <br /> 
+  
+  <p>
+    log {<br />&nbsp; &nbsp; &nbsp; &nbsp; source(local);<br />&nbsp; &nbsp; &nbsp; &nbsp; destination(hosts);<br />};
+  </p>
+  
+  <br /> 
+  
+  <p>
+    log {<br />&nbsp; &nbsp; &nbsp; &nbsp; source(LOG_ZONE);<br />&nbsp; &nbsp; &nbsp; &nbsp; destination(hosts);<br />};
+  </p>
+</div>
+
+<p>방화벽 udp 514포트 오픈 , syslog-ng 리스타트</p>
+
+<p>이렇게 하면…</p>
+
+<p>원격지에 있는 서버들의 시스템 로그들이 /home/SYSTEM_LOG/년/월/일/ip/</p>
+
+<p>형식으로 구분되어서 저장되는것을 볼수 있을것이다.</p>
+
+:ET

@@ -1,0 +1,10 @@
+I")<p><a href="http://cronolog.org/">http://cronolog.org/</a></p>
+
+<p>아파치 로그관리 할때 이용하는 로그툴이다.</p>
+
+<p>특징이라면 연/월/일 별로 폴더별 구분하여 로그를 저장시킬수 있다.</p>
+
+<p><strong>&lt;FONT color=#0000ff&gt;apache log 설정예 &gt;&lt;/FONT&gt;</strong><br />
+ErrorLog “| /usr/local/cronolog/sbin/cronolog /usr/local/apache/logs/domain.error_log.%Y-%m-%d.log”<br />
+CustomLog “| /usr/local/cronolog/sbin/cronolog /usr/local/apache/logs/domain.access_log.%Y-%m-%d.log”  combine</p>
+:ET

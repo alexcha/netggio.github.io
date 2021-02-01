@@ -1,0 +1,12 @@
+I"N<p>centos4기준으로 iptables connlimit  패키징 하면서  geoip 패치도 같이 만들어 보았다.</p>
+
+<p>패키징 해놓은것으로 &lt;FONT color=#0000ff&gt;libipt_geoip.so&lt;/FONT&gt; , &lt;FONT color=#0000ff&gt;ipt_geoip.ko&lt;/FONT&gt;을 한큐에 올릴수 있고,</p>
+
+<p>csv로 geoip데이터를 컨버팅 해주는 유틸 설치 까지 끝낼수 있다.</p>
+
+<p>뭐.. 암튼.. iptables  geoip패치를 하게 되면 국가별 차단룰 만드는게 간단해져서 컨트롤이  쉬워지는 장점이 있다.</p>
+
+<p>**[사전작업]<br />
+**&lt;FONT color=#333333&gt;작업에 앞서 사전작업이 필요하다…. 사전작업 이래봐야 별거 없다 ㅋㅋ…<br />
+현재 설치되어 있는 iptables의 src.rpm 구해서 아래와 같이만 해놓으면  된다..&lt;/FONT&gt;&lt;FONT color=#ff0000&gt;</p>
+:ET

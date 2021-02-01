@@ -1,0 +1,8 @@
+I"i<p>mod security 2.xx 버전에서 아래의 지시자를 ip혹은 도메인을 예외 처리를 할수 있다.</p>
+
+<p>IP 인 경우 –  SecRule REMOTE_ADDR<br />
+SecRule REMOTE_ADDR “192.168.1.1” allow,ctl:ruleEngine=off</p>
+
+<p>도메인인 경우 – SecRule SERVER_NAME <br />
+SecRule SERVER_NAME “blog.netggio.pe.kr” allow,ctl:ruleEngine=off</p>
+:ET

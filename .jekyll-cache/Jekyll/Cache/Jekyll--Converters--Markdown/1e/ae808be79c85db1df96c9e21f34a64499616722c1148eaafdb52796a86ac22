@@ -1,0 +1,6 @@
+I"<p><strong>윈도우 관리도구 스냅인 모음</strong></p>
+
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #e4e4e4; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 10px">
+  acssnap.msc QoS 허용 제어<br />certmgr.msc 인증서<br />ciadv.msc 인증서 서비스<br />comexp.msc 구성 요소 서비스 C:\WINNT\system32\Com<br />compmgmt.msc 컴퓨터 관리<br />dcpol.msc 도메인 컨트롤러 보안 정책<br />devmgmt.msc 장치 관리자<br />dfrg.msc 디스크 조각 모음<br />dfsgui.msc 분산 파일 시스템<br />diskmgmt.msc 디스크 관리<br />domain.msc Active Directory 도메인 및 트러스트<br />dompol.msc 도메인 보안 정책<br />dsa.msc Active Directory 사용자 및 컴퓨터<br />dssite.msc Active Directory 사이트 및 서비스<br />eventvwr.msc 이벤트 뷰어 eventvwr.exe 와 동일<br />faxserv.msc 팩스 서비스 관리<br />fsmgmt.msc 공유 폴더<br />gpedit.msc 그룹 정책<br />ias.msc 인터넷 인증 서비스<br />inetmgr.exe 인터넷 서비스 관리자 C:\WINNT\system32\inetsrv\iis.msc 와 동일<br />lusrmgr.msc 로컬 사용자 및 그룹<br />ntmsmgr.msc 이동식 저장소<br />ntmsoprq.msc 이동식 저장소 운영자 요청<br />perfmon.msc 성능<br />rrasmgmt.msc 라우팅 및 원격 액세스<br />secpol.msc 로컬 보안 정책<br />services.msc 서비스<br />tapimgmt.msc 전화 통신<br />tsadmin.exe 터미날 서비스 관리자<br />tscc.msc 터미날 서비스 구성<br />wmimgmt.msc WMI(Windows Managerment Infrastruct ure)
+</div>
+:ET

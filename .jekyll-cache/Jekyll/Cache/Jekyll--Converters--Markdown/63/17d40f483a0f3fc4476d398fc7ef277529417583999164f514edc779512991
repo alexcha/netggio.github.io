@@ -1,0 +1,45 @@
+I"�<p>centos4기준으로 iptables connlimit  패키징 하면서  geoip 패치도 같이 만들어 보았다.</p>
+
+<p>패키징 해놓은것으로 &lt;FONT color=#0000ff&gt;libipt_geoip.so&lt;/FONT&gt; , &lt;FONT color=#0000ff&gt;ipt_geoip.ko&lt;/FONT&gt;을 한큐에 올릴수 있고,</p>
+
+<p>csv로 geoip데이터를 컨버팅 해주는 유틸 설치 까지 끝낼수 있다.</p>
+
+<p>뭐.. 암튼.. iptables  geoip패치를 하게 되면 국가별 차단룰 만드는게 간단해져서 컨트롤이  쉬워지는 장점이 있다.</p>
+
+<p>**[사전작업]<br />
+**&lt;FONT color=#333333&gt;작업에 앞서 사전작업이 필요하다…. 사전작업 이래봐야 별거 없다 ㅋㅋ…<br />
+현재 설치되어 있는 iptables의 src.rpm 구해서 아래와 같이만 해놓으면  된다..&lt;/FONT&gt;&lt;FONT color=#ff0000&gt;</p>
+
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #e4e4e4; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 10px">
+  &lt;FONT color=#ff0000&gt;rpm -ivh iptables-1.2.11-3.2.RHEL4.src.rpm<br />rpmbuild -bp /usr/src/redhat/SPECS/iptables.spec &#8211;target=`uname -r`<br />ln -s /usr/src/redhat/BUILD/iptables-1.2.11/&nbsp; &nbsp;/usr/src/iptables<br />&lt;/FONT&gt;
+</div>
+<p>&lt;/FONT&gt;</p>
+
+<p>이것으로 .사전작업은 끝 ㅋㅋ..</p>
+
+<p>centos4는 디폴트가 1.2.11버전일것이다.</p>
+
+<p>이제~ 패키징해 놓은 압축파일 받아다가 폴더 안에 있는 geo.sh만 실행 해주면 끝난다.</p>
+
+<p>**다운로드 -&gt; ** <FONT size="2">**[<FONT size="2">**POM-NG\_geoip\_CentOS-4.tar.gz  
+**</FONT>][1]**</FONT><img src="http://netggio.pe.kr/wp-content/uploads/1/1331287506.gif" class="aligncenter" width="450" height="482" alt="사용자 삽입 이미지" /> 별문제 없었다면 libipt_geoip.so , ipt_geoip.ko 올라온거 확인 될거고, csv2bin등.. <br />
+geoip_tools이 인스톨되어 있을것이다.</p>
+
+<p>이제 국가별ip데이터를 받아다가 iptables가 인식할수 있게 컨버팅만 해주면 된다<br />
+ip데이터는 여기서~ <a href="http://geolite.maxmind.com/download/geoip/database/GeoIPCountryCSV.zip">http://geolite.maxmind.com/download/geoip/database/GeoIPCountryCSV.zip</a></p>
+
+<p>컨버팅은 csv2bin을 이용하면 된다. 방법은 아래 스샷 참고.  <img src="http://netggio.pe.kr/wp-content/uploads/1/6762662780.gif" class="aligncenter" width="450" height="213" alt="사용자 삽입 이미지" />그리고 국가별룰이 올라오는지 확인~</p>
+
+<p>간단 사용법은 iptables -m geoip –help으로 알아 볼 수 있다.</p>
+
+<p> ip데이터는 주기적으로 변동되므로 각자 알아서 스케줄을 돌려, 갱신해주면 되겠다.</p>
+
+<p>커널 업데이트등 현재 사용하는 커널을 변경하게되면  인스톨 스크립트를 다시 돌려줘야 커널에 맞게끔 모듈이 올라온다.</p>
+
+<p>귀차니즘 안녕~~</p>
+
+<p>관련 사이트 <br />
+http://people.netfilter.org/peejix/geoip/howto/geoip-HOWTO.html#toc1<br />
+&lt;/A&gt;http://geolite.maxmind.com</p>
+
+:ET

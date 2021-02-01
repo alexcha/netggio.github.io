@@ -1,0 +1,120 @@
+I"�<p>리턴메일 오류 메시지</p>
+
+<p>▶ 501 Denied domain name<br />
+도메인주소를 잘못 입력 or 수신측에서 도메인을 수신거부한 경우</p>
+
+<p>▶ 421 Server too busy.<br />
+수신측 서버의 응답지연. 수신서버의 트래픽등으로 메일을 수신 받지 못하는 상황에서 발송자에게 리턴 메일을 보냄.</p>
+
+<p>▶ 421-Microsoft ESMTP MAIL Service, Version: 5.0.2195.5600 ready at Service not available, closing transmission channel<br />
+MS사의 smtp 서버의 장애로 인해 메일을 수신받지 못하는 상황에서 리턴된 메시지.</p>
+
+<p>▶ 441 4.4.1 No answer from host<br />
+수신측 서버의 응답이 없어서 리턴된 메시지.</p>
+
+<p>▶ 451 4.4.0 DNS resolving error<br />
+수신측 서버의 도메인을 못찾아 리턴된 메시지.</p>
+
+<p>▶ 451 4.3.0 Other or undefined mail system status<br />
+수신측 메일 시스템의 프로토콜이 틀리거나 수신 smtp 서버가 아닐경우 리턴되는 메시지.</p>
+
+<p>▶ 451 4.3.0 Temporary system failure. Please try again later.<br />
+수신 서버의 일시적인 장애로 인해 메일을 수신받지 못해 리턴된 메시지.</p>
+
+<p>▶ 451 4.4.2 Bad connection (io timeout)<br />
+수신 서버의 응답이 없어서 응답시간이 초과 되어 리턴된 메시지.</p>
+
+<p>▶ 451 Relay Server Not Ready.<br />
+수신측 서버에서 릴레이 기능이 안돼어 리턴된 메시지.</p>
+
+<p>▶ 452 4.4.5 Insufficient disk space; try again later<br />
+수신서버의 디스크용량이 부족하여 메일을 수신받지 못해 리턴된 메시지.</p>
+
+<p>▶ 500 Syntax Error, Command Unrecognized EHLO mail.example.com<br />
+발송자의 메일 발송 클라이언트(Outlook등)에서 메일발송시 수신측 메일 서버에서 <br />
+SMTP 명령어를 인식하지 못해 리턴된 메시지.</p>
+
+<p>▶ 500 5.5.1 Command unrecognized: “XXXX mail.example.com”<br />
+수신서버가 SMTP 명령어를 인식 하지 못함. (위와 동일).</p>
+
+<p>▶ 501 5.1.8 Sender domain must exist(example.com)<br />
+수신측 도메인(example.com) 이 존재 하지 않아 리턴된 메시지.</p>
+
+<p>▶ 502 Not implemented<br />
+수신측 서버가 smtp 명령어를 인식 하지 못해 리턴된 메시지.</p>
+
+<p>▶ 505 Authentication required<br />
+수신측 서버가 릴레이 인증 등을 허용하지 않아 리턴된 메시지.</p>
+
+<p>▶ 512 5.1.2 Bad destination system address<br />
+수신 서버의 장애나 네트웍 트래픽등으로 인헤 수신서버가 응답이 없을 때 리턴된 메시지.</p>
+
+<p>▶ 550 5.1.1 Suspended user &lt;&amp;example@example.com» <br />
+수신자의 사용자의 계정이 중단 상태.</p>
+
+<p>▶ 550 5.1.2 &lt;&amp;example@example.com»… Unsupported mail destination<br />
+수신 서버가 응답이 지연되어 리턴된 메시지.</p>
+
+<p>▶ 550 5.7.1 &lt;&amp;example@example.com»… Access denied.(211.202.13.144) &lt;&amp;example@example.com»<br />
+수신자(<a href="mailto:example@example.com">example@example.com</a>)가 발신자의 메일주소를 수신 거부한 상태.</p>
+
+<p>▶ 550 5.7.1 &lt;&amp;example@example.com»… Relaying denied. IP name lookup failed [211.115.203.111]<br />
+수신 서버에서 발신자의 IP에 대해 릴레이 거부를 하여 메일을 보내지 못해 리턴된 메시지.</p>
+
+<p>▶ 550 Requested action not taken: mailbox unavailable<br />
+수신자의 메일함을 찾지 못해 리턴된 메시지.</p>
+
+<p>▶ 550 Mail is reject ( filtering reject )<br />
+수신 서버에서 발신자의 메일 주소나 IP를 필터링 하여 거부되어 리턴된 메시지.</p>
+
+<p>▶ 550 5.1.1 &lt;&amp;example@example.com»… User unknown<br />
+수신자 (<a href="mailto:example@example.com">example@example.com</a>)계정을 찾지 못해 리턴된 메시지.</p>
+
+<p>▶ 550 5.7.1 Unable to relay for <a href="mailto:example@example.com">example@example.com</a><br />
+수신 서버에서 릴레이 거부를 하여 리턴된 메시지.</p>
+
+<p>▶ 550 Invalid recipient <a href="mailto:example@example.com">example@example.com</a><br />
+수신자 계정을 찾지 못해 리턴된 메시지 .</p>
+
+<p>▶ 550 RCPT &lt;&amp;example@example.com» ERROR. Mailbox doesn’t exist<br />
+수신자 메일함이 존재 하지 않아서 리턴된 메시지.</p>
+
+<p>▶ 553 5.3.0 &lt;&amp;example@example.com»… spam<br />
+발송자의 계정이 수신서버 상에서 스패머로 등록이 되어 메일 수신 거부를 해서 리턴된 메시지</p>
+
+<p>▶ 553 sorry, your envelope sender is in my badmailfrom list<br />
+발신자의 메일 주소가 수신서버상에서 블랙리스트에 올라 거부되어 리턴됨.</p>
+
+<p>▶ 553 sorry, that domain isn’t in my list of allowed rcpt hosts <br />
+발신자의 메일 도메인주소 자체가 수신 서버에서 차단되어 리턴된 메시지.</p>
+
+<p>▶ 553 5.1.8 &lt;&amp;example@example.com»… Domain of sender address <a href="mailto:test@example.comdoes">test@example.comdoes</a> not exist<br />
+발신자의 도메인에 대해 수신서버에서 체크 하여 없는 도메인일 경우 리턴시킨 메시지.</p>
+
+<p>▶ 553 5.0.0 We do not accept mail from spammers – If you have questions,please email <a href="mailto:example@example.com">example@example.com</a><br />
+발신자의 메일 계정이 스패머로 수신서버에서 등록이 되어 리턴된 메시지.</p>
+
+<p>▶ 553 sorry, your envelope sender is enlisted as spammer.<br />
+발신자의 메일 주소가 수신서버상의 스패머 리스트에 등록 되어 리턴된 메시지.</p>
+
+<p>▶ 553-This target address is not our MX service<br />
+수신자의 주소가 수신서버에서 서비스 안하는 도메인일 경우 리턴된 메시지.</p>
+
+<p>▶ 554 5.3.2 Rejected by mailbox host. REPLY:(250 &lt;&amp;example@example.com»… Sender ok)<br />
+수신자가 발송자의 메일 계정에 대해 수신 거부를 하여 리턴된 메시지 .</p>
+
+<p>▶ 554 5.3.0 Mail have traversed Too many hops. Reject it.<br />
+발신자가 메일을 보낼 때 동보메일로 수신자의 메일 계정을 수신서버의 제한량 이상 넣어 보내어 리턴된 메시지.</p>
+
+<p>▶ 554 5.3.2 Rejected by mailbox host. REPLY:(550 5.1.1 unknown or illegal alias: <a href="mailto:example@example.com">example@example.com</a>)<br />
+수신자가 발송자의 메일 계정에 대해 수신거부를 설정하여 리턴된 메시지.</p>
+
+<p>▶ 554 1048035239.13309.hanmir accept failed. [code=-1]<br />
+hanmir 서버에서 응답이 안돼어 리턴된 메시지. <br />
+ <br />
+▶ 554 5.1.0 Sender Denied<br />
+발신자의 계정을 수신서버에서 수신 거부함.</p>
+
+<p>▶ 554 &lt;&amp;example@example.com»: Recipient address rejected: Access denied<br />
+수신자가 발신자의 계정에 대해 수신 거부를 설정함</p>
+:ET

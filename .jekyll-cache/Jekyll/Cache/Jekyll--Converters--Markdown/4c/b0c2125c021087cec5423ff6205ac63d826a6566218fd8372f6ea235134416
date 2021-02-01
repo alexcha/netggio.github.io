@@ -1,0 +1,579 @@
+I"�w<h2 class="section">[<u>&lt;FONT color=#0000ff&gt;core&lt;/FONT&gt;</u>][1] </h2>
+<div class="section">  
+
+
+  
+
+:   Core Apache HTTP Server features that are always available  
+    
+    
+    [<u>&lt;FONT color=#0000ff&gt;mpm_common&lt;/FONT&gt;</u>][2]  
+    <dd class="separate">A collection of directives that are implemented by more than one multi-processing module (MPM)  
+    
+    
+    [<u>&lt;FONT color=#0000ff&gt;beos&lt;/FONT&gt;</u>][3]  
+    
+    
+    :   BeOS에 최적화된 다중처리 모듈.  
+        
+        
+        [<u>&lt;FONT color=#0000ff&gt;event&lt;/FONT&gt;</u>][4]  
+        
+        
+        :   An experimental variant of the standard <code class="module">[<u>&lt;FONT color=#0000ff&gt;worker&lt;/FONT&gt;</u>][5]</code> MPM  
+            
+            
+            [<u>&lt;FONT color=#0000ff&gt;mpm_netware&lt;/FONT&gt;</u>][6]  
+            
+            
+            :   Multi-Processing Module implementing an exclusively threaded web server optimized for Novell NetWare  
+                
+                
+                [<u>&lt;FONT color=#0000ff&gt;mpmt_os2&lt;/FONT&gt;</u>][7]  
+                
+                
+                :   Hybrid multi-process, multi-threaded MPM for OS/2  
+                    
+                    
+                    [<u>&lt;FONT color=#0000ff&gt;prefork&lt;/FONT&gt;</u>][8]  
+                    
+                    
+                    :   Implements a non-threaded, pre-forking web server  
+                        
+                        
+                        [<u>&lt;FONT color=#0000ff&gt;mpm_winnt&lt;/FONT&gt;</u>][9]  
+                        
+                        
+                        :   This Multi-Processing Module is optimized for Windows NT.  
+                            
+                            
+                            [<u>&lt;FONT color=#0000ff&gt;worker&lt;/FONT&gt;</u>][5]  
+                            
+                            
+                            :   Multi-Processing Module implementing a hybrid multi-threaded multi-process web server &lt;/DL&gt;&lt;/DIV&gt;
+                              
+                            <div class="top">  
+                            &nbsp;</div>  
+                            <div class="section">  
+                            
+                            
+                              
+                            
+                            
+                            <a id="A" href="http://httpd.apache.org/docs/2.2/ko/mod/mod_actions.html" name="A"><u>&lt;FONT color=#0000ff&gt;mod_actions&lt;/FONT&gt;</u></a>  
+                            
+                            
+                            :   이 모듈은 미디어종류나 요청메서드에 따라 CGI 스크립트를 실행한다.  
+                                
+                                
+                                [<u>&lt;FONT color=#0000ff&gt;mod_alias&lt;/FONT&gt;</u>][10]  
+                                
+                                
+                                :   파일시스템의 다른 부분들을 문서 계층구조에 포함하고, URL 리다이렉션을 제공한다  
+                                    
+                                    
+                                    [<u>&lt;FONT color=#0000ff&gt;mod_asis&lt;/FONT&gt;</u>][11]  
+                                    
+                                    
+                                    :   HTTP 헤더를 포함한 파일을 보낸다  
+                                        
+                                        
+                                        [<u>&lt;FONT color=#0000ff&gt;mod\_auth\_basic&lt;/FONT&gt;</u>][12]  
+                                        
+                                        
+                                        :   Basic authentication  
+                                            
+                                            
+                                            [<u>&lt;FONT color=#0000ff&gt;mod\_auth\_digest&lt;/FONT&gt;</u>][13]  
+                                            
+                                            
+                                            :   MD5 Digest Authentication을 사용한 사용자인증.  
+                                                
+                                                
+                                                [<u>&lt;FONT color=#0000ff&gt;mod\_authn\_alias&lt;/FONT&gt;</u>][14]  
+                                                
+                                                
+                                                :   Provides the ability to create extended authentication providers based on actual providers  
+                                                    
+                                                    
+                                                    [<u>&lt;FONT color=#0000ff&gt;mod\_authn\_anon&lt;/FONT&gt;</u>][15]  
+                                                    
+                                                    
+                                                    :   인증영역에 &#8220;익명(anonymous)&#8221; 사용자의 접근을 허용한다  
+                                                        
+                                                        
+                                                        [<u>&lt;FONT color=#0000ff&gt;mod\_authn\_dbd&lt;/FONT&gt;</u>][16]  
+                                                        
+                                                        
+                                                        :   User authentication using an SQL database  
+                                                            
+                                                            
+                                                            [<u>&lt;FONT color=#0000ff&gt;mod\_authn\_dbm&lt;/FONT&gt;</u>][17]  
+                                                            
+                                                            
+                                                            :   DBM 파일을 사용한 사용자 인증  
+                                                                
+                                                                
+                                                                [<u>&lt;FONT color=#0000ff&gt;mod\_authn\_default&lt;/FONT&gt;</u>][18]  
+                                                                
+                                                                
+                                                                :   최후 인증모듈  
+                                                                    
+                                                                    
+                                                                    [<u>&lt;FONT color=#0000ff&gt;mod\_authn\_file&lt;/FONT&gt;</u>][19]  
+                                                                    
+                                                                    
+                                                                    :   문자파일을 이용한 사용자 인증  
+                                                                        
+                                                                        
+                                                                        [<u>&lt;FONT color=#0000ff&gt;mod\_authnz\_ldap&lt;/FONT&gt;</u>][20]  
+                                                                        
+                                                                        
+                                                                        :   Allows an LDAP directory to be used to store the database for HTTP Basic authentication.  
+                                                                            
+                                                                            
+                                                                            [<u>&lt;FONT color=#0000ff&gt;mod\_authz\_dbm&lt;/FONT&gt;</u>][21]  
+                                                                            
+                                                                            
+                                                                            :   DBM 파일을 사용한 그룹 인증  
+                                                                                
+                                                                                
+                                                                                [<u>&lt;FONT color=#0000ff&gt;mod\_authz\_default&lt;/FONT&gt;</u>][22]  
+                                                                                
+                                                                                
+                                                                                :   최후 권한부여모듈  
+                                                                                    
+                                                                                    
+                                                                                    [<u>&lt;FONT color=#0000ff&gt;mod\_authz\_groupfile&lt;/FONT&gt;</u>][23]  
+                                                                                    
+                                                                                    
+                                                                                    :   일반 문자파일을 이용한 그룹 권한부여  
+                                                                                        
+                                                                                        
+                                                                                        [<u>&lt;FONT color=#0000ff&gt;mod\_authz\_host&lt;/FONT&gt;</u>][24]  
+                                                                                        
+                                                                                        
+                                                                                        :   호스트 (이름이나 IP 주소)를 사용한 그룹 권한부여  
+                                                                                            
+                                                                                            
+                                                                                            [<u>&lt;FONT color=#0000ff&gt;mod\_authz\_owner&lt;/FONT&gt;</u>][25]  
+                                                                                            
+                                                                                            
+                                                                                            :   파일 소유자를 이용한 권한부여  
+                                                                                                
+                                                                                                
+                                                                                                [<u>&lt;FONT color=#0000ff&gt;mod\_authz\_user&lt;/FONT&gt;</u>][26]  
+                                                                                                
+                                                                                                
+                                                                                                :   사용자 권한부여  
+                                                                                                    
+                                                                                                    
+                                                                                                    [<u>&lt;FONT color=#0000ff&gt;mod_autoindex&lt;/FONT&gt;</u>][27]  
+                                                                                                    
+                                                                                                    
+                                                                                                    :   자동으로 유닉스의 `ls` 명령어나 Win32의 `dir` 쉘명령어와 유사한 디렉토리 목록을 만든다  
+                                                                                                        
+                                                                                                        
+                                                                                                        <a id="C" href="http://httpd.apache.org/docs/2.2/ko/mod/mod_cache.html" name="C"><u>&lt;FONT color=#0000ff&gt;mod_cache&lt;/FONT&gt;</u></a>  
+                                                                                                        
+                                                                                                        
+                                                                                                        :   URI를 키로 사용하여 내용을 캐쉬한다.  
+                                                                                                            
+                                                                                                            
+                                                                                                            [<u>&lt;FONT color=#0000ff&gt;mod\_cern\_meta&lt;/FONT&gt;</u>][28]  
+                                                                                                            
+                                                                                                            
+                                                                                                            :   CERN 웹서버 메타파일 지원  
+                                                                                                                
+                                                                                                                
+                                                                                                                [<u>&lt;FONT color=#0000ff&gt;mod_cgi&lt;/FONT&gt;</u>][29]  
+                                                                                                                
+                                                                                                                
+                                                                                                                :   CGI 스크립트 실행  
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    [<u>&lt;FONT color=#0000ff&gt;mod_cgid&lt;/FONT&gt;</u>][30]  
+                                                                                                                    
+                                                                                                                    
+                                                                                                                    :   외부 CGI 데몬을 사용하여 CGI 스크립트를 실행  
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        [<u>&lt;FONT color=#0000ff&gt;mod\_charset\_lite&lt;/FONT&gt;</u>][31]  
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        :   문자집합 변환을 지정  
+                                                                                                                            
+                                                                                                                            
+                                                                                                                            <a id="D" href="http://httpd.apache.org/docs/2.2/ko/mod/mod_dav.html" name="D"><u>&lt;FONT color=#0000ff&gt;mod_dav&lt;/FONT&gt;</u></a>  
+                                                                                                                            
+                                                                                                                            
+                                                                                                                            :   Distributed Authoring and Versioning ([<u>&lt;FONT color=#0000ff&gt;WebDAV&lt;/FONT&gt;</u>][32]) 기능  
+                                                                                                                                
+                                                                                                                                
+                                                                                                                                [<u>&lt;FONT color=#0000ff&gt;mod\_dav\_fs&lt;/FONT&gt;</u>][33]  
+                                                                                                                                
+                                                                                                                                
+                                                                                                                                :   <code class="module">[<u>&lt;FONT color=#0000ff&gt;mod_dav&lt;/FONT&gt;</u>][34]</code>을 위한 파일시스템 제공자  
+                                                                                                                                    
+                                                                                                                                    
+                                                                                                                                    [<u>&lt;FONT color=#0000ff&gt;mod\_dav\_lock&lt;/FONT&gt;</u>][35]  
+                                                                                                                                    
+                                                                                                                                    
+                                                                                                                                    :   generic locking module for <code class="module">[<u>&lt;FONT color=#0000ff&gt;mod_dav&lt;/FONT&gt;</u>][34]</code>  
+                                                                                                                                        
+                                                                                                                                        
+                                                                                                                                        [<u>&lt;FONT color=#0000ff&gt;mod_dbd&lt;/FONT&gt;</u>][36]  
+                                                                                                                                        
+                                                                                                                                        
+                                                                                                                                        :   Manages SQL database connections  
+                                                                                                                                            
+                                                                                                                                            
+                                                                                                                                            [<u>&lt;FONT color=#0000ff&gt;mod_deflate&lt;/FONT&gt;</u>][37]  
+                                                                                                                                            
+                                                                                                                                            
+                                                                                                                                            :   내용을 클라이언트로 보내기 전에 압축한다  
+                                                                                                                                                
+                                                                                                                                                
+                                                                                                                                                [<u>&lt;FONT color=#0000ff&gt;mod_dir&lt;/FONT&gt;</u>][38]  
+                                                                                                                                                
+                                                                                                                                                
+                                                                                                                                                :   &#8220;마지막 슬래쉬&#8221; 리다이렉션을 제공하고 디렉토리 index 파일을 서비스한다  
+                                                                                                                                                    
+                                                                                                                                                    
+                                                                                                                                                    [<u>&lt;FONT color=#0000ff&gt;mod\_disk\_cache&lt;/FONT&gt;</u>][39]  
+                                                                                                                                                    
+                                                                                                                                                    
+                                                                                                                                                    :   Content cache storage manager keyed to URIs  
+                                                                                                                                                        
+                                                                                                                                                        
+                                                                                                                                                        [<u>&lt;FONT color=#0000ff&gt;mod_dumpio&lt;/FONT&gt;</u>][40]  
+                                                                                                                                                        
+                                                                                                                                                        
+                                                                                                                                                        :   Dumps all I/O to error log as desired.  
+                                                                                                                                                            
+                                                                                                                                                            
+                                                                                                                                                            <a id="E" href="http://httpd.apache.org/docs/2.2/ko/mod/mod_echo.html" name="E"><u>&lt;FONT color=#0000ff&gt;mod_echo&lt;/FONT&gt;</u></a>  
+                                                                                                                                                            
+                                                                                                                                                            
+                                                                                                                                                            :   프로토콜 모듈을 설명하기위한 간단한 echo 서버  
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                [<u>&lt;FONT color=#0000ff&gt;mod_env&lt;/FONT&gt;</u>][41]  
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                :   CGI 스크립트나 SSI 페이지에 전달할 환경변수를 수정한다  
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                    [<u>&lt;FONT color=#0000ff&gt;mod_example&lt;/FONT&gt;</u>][42]  
+                                                                                                                                                                    
+                                                                                                                                                                    
+                                                                                                                                                                    :   아파치 모듈 API를 설명한다  
+                                                                                                                                                                        
+                                                                                                                                                                        
+                                                                                                                                                                        [<u>&lt;FONT color=#0000ff&gt;mod_expires&lt;/FONT&gt;</u>][43]  
+                                                                                                                                                                        
+                                                                                                                                                                        
+                                                                                                                                                                        :   사용자가 지정한 기준에 따라 `Expires`와 `Cache-Control` HTTP 헤더를 생성한다  
+                                                                                                                                                                            
+                                                                                                                                                                            
+                                                                                                                                                                            [<u>&lt;FONT color=#0000ff&gt;mod\_ext\_filter&lt;/FONT&gt;</u>][44]  
+                                                                                                                                                                            
+                                                                                                                                                                            
+                                                                                                                                                                            :   응답 내용을 외부 프로그램으로 처리한 후 클라이언트로 보낸다  
+                                                                                                                                                                                
+                                                                                                                                                                                
+                                                                                                                                                                                <a id="F" href="http://httpd.apache.org/docs/2.2/ko/mod/mod\_file\_cache.html" name="F"><u>&lt;FONT color=#0000ff&gt;mod\_file\_cache&lt;/FONT&gt;</u></a>  
+                                                                                                                                                                                
+                                                                                                                                                                                
+                                                                                                                                                                                :   메모리에 정적 파일들을 캐쉬  
+                                                                                                                                                                                    
+                                                                                                                                                                                    
+                                                                                                                                                                                    [<u>&lt;FONT color=#0000ff&gt;mod_filter&lt;/FONT&gt;</u>][45]  
+                                                                                                                                                                                    
+                                                                                                                                                                                    
+                                                                                                                                                                                    :   Context-sensitive smart filter configuration module  
+                                                                                                                                                                                        
+                                                                                                                                                                                        
+                                                                                                                                                                                        <a id="H" href="http://httpd.apache.org/docs/2.2/ko/mod/mod_headers.html" name="H"><u>&lt;FONT color=#0000ff&gt;mod_headers&lt;/FONT&gt;</u></a>  
+                                                                                                                                                                                        
+                                                                                                                                                                                        
+                                                                                                                                                                                        :   HTTP 요청 헤더와 응답 헤더 수정  
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            <a id="I" href="http://httpd.apache.org/docs/2.2/ko/mod/mod_ident.html" name="I"><u>&lt;FONT color=#0000ff&gt;mod_ident&lt;/FONT&gt;</u></a>  
+                                                                                                                                                                                            
+                                                                                                                                                                                            
+                                                                                                                                                                                            :   RFC 1413 ident 검색  
+                                                                                                                                                                                                
+                                                                                                                                                                                                
+                                                                                                                                                                                                [<u>&lt;FONT color=#0000ff&gt;mod_imagemap&lt;/FONT&gt;</u>][46]  
+                                                                                                                                                                                                
+                                                                                                                                                                                                
+                                                                                                                                                                                                :   서버측 이미지맵(imagemap) 처리  
+                                                                                                                                                                                                    
+                                                                                                                                                                                                    
+                                                                                                                                                                                                    [<u>&lt;FONT color=#0000ff&gt;mod_include&lt;/FONT&gt;</u>][47]  
+                                                                                                                                                                                                    
+                                                                                                                                                                                                    
+                                                                                                                                                                                                    :   Server-parsed html documents (Server Side Includes)  
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        [<u>&lt;FONT color=#0000ff&gt;mod_info&lt;/FONT&gt;</u>][48]  
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        :   서버 설정에 대한 종합적인 정보를 보여준다  
+                                                                                                                                                                                                            
+                                                                                                                                                                                                            
+                                                                                                                                                                                                            [<u>&lt;FONT color=#0000ff&gt;mod_isapi&lt;/FONT&gt;</u>][49]  
+                                                                                                                                                                                                            
+                                                                                                                                                                                                            
+                                                                                                                                                                                                            :   Windows용 아파치에서 ISAPI Extension 사용  
+                                                                                                                                                                                                                
+                                                                                                                                                                                                                
+                                                                                                                                                                                                                <a id="L" href="http://httpd.apache.org/docs/2.2/ko/mod/mod_ldap.html" name="L"><u>&lt;FONT color=#0000ff&gt;mod_ldap&lt;/FONT&gt;</u></a>  
+                                                                                                                                                                                                                
+                                                                                                                                                                                                                
+                                                                                                                                                                                                                :   LDAP connection pooling and result caching services for use by other LDAP modules  
+                                                                                                                                                                                                                    
+                                                                                                                                                                                                                    
+                                                                                                                                                                                                                    [<u>&lt;FONT color=#0000ff&gt;mod\_log\_config&lt;/FONT&gt;</u>][50]  
+                                                                                                                                                                                                                    
+                                                                                                                                                                                                                    
+                                                                                                                                                                                                                    :   서버로의 요청을 로그에 기록한다  
+                                                                                                                                                                                                                        
+                                                                                                                                                                                                                        
+                                                                                                                                                                                                                        [<u>&lt;FONT color=#0000ff&gt;mod\_log\_forensic&lt;/FONT&gt;</u>][51]  
+                                                                                                                                                                                                                        
+                                                                                                                                                                                                                        
+                                                                                                                                                                                                                        :   Forensic Logging of the requests made to the server  
+                                                                                                                                                                                                                            
+                                                                                                                                                                                                                            
+                                                                                                                                                                                                                            [<u>&lt;FONT color=#0000ff&gt;mod_logio&lt;/FONT&gt;</u>][52]  
+                                                                                                                                                                                                                            
+                                                                                                                                                                                                                            
+                                                                                                                                                                                                                            :   요청당 입출력 바이트수를 기록  
+                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                <a id="M" href="http://httpd.apache.org/docs/2.2/ko/mod/mod\_mem\_cache.html" name="M"><u>&lt;FONT color=#0000ff&gt;mod\_mem\_cache&lt;/FONT&gt;</u></a>  
+                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                :   URI를 키로 사용하여 내용을 캐쉬한다.  
+                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                    [<u>&lt;FONT color=#0000ff&gt;mod_mime&lt;/FONT&gt;</u>][53]  
+                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                    :   Associates the requested filename&#8217;s extensions with the file&#8217;s behavior (handlers and filters) and content (mime-type, language, character set and encoding)  
+                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                        [<u>&lt;FONT color=#0000ff&gt;mod\_mime\_magic&lt;/FONT&gt;</u>][54]  
+                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                        :   Determines the MIME type of a file by looking at a few bytes of its contents  
+                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                            <a id="N" href="http://httpd.apache.org/docs/2.2/ko/mod/mod_negotiation.html" name="N"><u>&lt;FONT color=#0000ff&gt;mod_negotiation&lt;/FONT&gt;</u></a>  
+                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                            :   Provides for [<u>&lt;FONT color=#0000ff&gt;content negotiation&lt;/FONT&gt;</u>][55]  
+                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                [<u>&lt;FONT color=#0000ff&gt;mod\_nw\_ssl&lt;/FONT&gt;</u>][56]  
+                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                :   Enable SSL encryption for NetWare  
+                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                    <a id="P" href="http://httpd.apache.org/docs/2.2/ko/mod/mod_proxy.html" name="P"><u>&lt;FONT color=#0000ff&gt;mod_proxy&lt;/FONT&gt;</u></a>  
+                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                    :   HTTP/1.1 proxy/gateway server  
+                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                        [<u>&lt;FONT color=#0000ff&gt;mod\_proxy\_ajp&lt;/FONT&gt;</u>][57]  
+                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                        :   AJP support module for <code class="module">[<u>&lt;FONT color=#0000ff&gt;mod_proxy&lt;/FONT&gt;</u>][58]</code>  
+                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                            [<u>&lt;FONT color=#0000ff&gt;mod\_proxy\_balancer&lt;/FONT&gt;</u>][59]  
+                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                            :   <code class="module">[<u>&lt;FONT color=#0000ff&gt;mod_proxy&lt;/FONT&gt;</u>][58]</code> extension for load balancing  
+                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                [<u>&lt;FONT color=#0000ff&gt;mod\_proxy\_connect&lt;/FONT&gt;</u>][60]  
+                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                :   <code class="module">[<u>&lt;FONT color=#0000ff&gt;mod_proxy&lt;/FONT&gt;</u>][58]</code> extension for `CONNECT` request handling  
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    [<u>&lt;FONT color=#0000ff&gt;mod\_proxy\_ftp&lt;/FONT&gt;</u>][61]  
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    :   FTP support module for <code class="module">[<u>&lt;FONT color=#0000ff&gt;mod_proxy&lt;/FONT&gt;</u>][58]</code>  
+                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                        [<u>&lt;FONT color=#0000ff&gt;mod\_proxy\_http&lt;/FONT&gt;</u>][62]  
+                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                        :   HTTP support module for <code class="module">[<u>&lt;FONT color=#0000ff&gt;mod_proxy&lt;/FONT&gt;</u>][58]</code>  
+                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                            [<u>&lt;FONT color=#0000ff&gt;mod\_proxy\_scgi&lt;/FONT&gt;</u>][63]  
+                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                            :   SCGI gateway module for <code class="module">[<u>&lt;FONT color=#0000ff&gt;mod_proxy&lt;/FONT&gt;</u>][58]</code>  
+                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                <a id="R" href="http://httpd.apache.org/docs/2.2/ko/mod/mod_rewrite.html" name="R"><u>&lt;FONT color=#0000ff&gt;mod_rewrite&lt;/FONT&gt;</u></a>  
+                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                :   Provides a rule-based rewriting engine to rewrite requested URLs on the fly  
+                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                    <a id="S" href="http://httpd.apache.org/docs/2.2/ko/mod/mod_setenvif.html" name="S"><u>&lt;FONT color=#0000ff&gt;mod_setenvif&lt;/FONT&gt;</u></a>  
+                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                    :   요청의 성격에 따라 환경변수 설정을 변경한다  
+                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                        [<u>&lt;FONT color=#810081&gt;mod_so&lt;/FONT&gt;</u>][64]  
+                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                        :   시작할때 혹은 재시작할때 실행가능한 코드와 모듈을 서버로 읽어들인다  
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            [<u>&lt;FONT color=#0000ff&gt;mod_speling&lt;/FONT&gt;</u>][65]  
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                            :   사용자가 대소문자를 잘못 사용하거나 맞춤법이 틀리는 것을 한번까지 허용하여 잘못된 URL을 고치려고 시도한다  
+                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                [<u>&lt;FONT color=#0000ff&gt;mod_ssl&lt;/FONT&gt;</u>][66]  
+                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                :   Strong cryptography using the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols  
+                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                    [<u>&lt;FONT color=#0000ff&gt;mod_status&lt;/FONT&gt;</u>][67]  
+                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                    :   서버 활동과 성능에 대한 정보를 제공한다  
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        [<u>&lt;FONT color=#0000ff&gt;mod_substitute&lt;/FONT&gt;</u>][68]  
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                        :   Perform search and replace operations on response bodies  
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            [<u>&lt;FONT color=#0000ff&gt;mod_suexec&lt;/FONT&gt;</u>][69]  
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            :   CGI 스크립트를 특정 사용자와 그룹 권한으로 실행한다  
+                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                <a id="U" href="http://httpd.apache.org/docs/2.2/ko/mod/mod\_unique\_id.html" name="U"><u>&lt;FONT color=#0000ff&gt;mod\_unique\_id&lt;/FONT&gt;</u></a>  
+                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                :   각 요청마다 유일한 식별자를 가지는 환경변수를 제공한다  
+                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                    [<u>&lt;FONT color=#0000ff&gt;mod_userdir&lt;/FONT&gt;</u>][70]  
+                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                    :   사용자별 디렉토리  
+                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                        [<u>&lt;FONT color=#0000ff&gt;mod_usertrack&lt;/FONT&gt;</u>][71]  
+                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                        :   *Clickstream* logging of user activity on a site  
+                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                            <a id="V" href="http://httpd.apache.org/docs/2.2/ko/mod/mod_version.html" name="V"><u>&lt;FONT color=#0000ff&gt;mod_version&lt;/FONT&gt;</u></a>  
+                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                            :   버전별 설정  
+                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                [<u>&lt;FONT color=#0000ff&gt;mod\_vhost\_alias&lt;/FONT&gt;</u>][72]  
+                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                :   Provides for dynamically configured mass virtual hosting &lt;/DL&gt;</div>&lt;/p&gt;
+
+ [1]: http://httpd.apache.org/docs/2.2/ko/mod/core.html
+ [2]: http://httpd.apache.org/docs/2.2/ko/mod/mpm_common.html
+ [3]: http://httpd.apache.org/docs/2.2/ko/mod/beos.html
+ [4]: http://httpd.apache.org/docs/2.2/ko/mod/event.html
+ [5]: http://httpd.apache.org/docs/2.2/ko/mod/worker.html
+ [6]: http://httpd.apache.org/docs/2.2/ko/mod/mpm_netware.html
+ [7]: http://httpd.apache.org/docs/2.2/ko/mod/mpmt_os2.html
+ [8]: http://httpd.apache.org/docs/2.2/ko/mod/prefork.html
+ [9]: http://httpd.apache.org/docs/2.2/ko/mod/mpm_winnt.html
+ [10]: http://httpd.apache.org/docs/2.2/ko/mod/mod_alias.html
+ [11]: http://httpd.apache.org/docs/2.2/ko/mod/mod_asis.html
+ [12]: http://httpd.apache.org/docs/2.2/ko/mod/mod_auth_basic.html
+ [13]: http://httpd.apache.org/docs/2.2/ko/mod/mod_auth_digest.html
+ [14]: http://httpd.apache.org/docs/2.2/ko/mod/mod_authn_alias.html
+ [15]: http://httpd.apache.org/docs/2.2/ko/mod/mod_authn_anon.html
+ [16]: http://httpd.apache.org/docs/2.2/ko/mod/mod_authn_dbd.html
+ [17]: http://httpd.apache.org/docs/2.2/ko/mod/mod_authn_dbm.html
+ [18]: http://httpd.apache.org/docs/2.2/ko/mod/mod_authn_default.html
+ [19]: http://httpd.apache.org/docs/2.2/ko/mod/mod_authn_file.html
+ [20]: http://httpd.apache.org/docs/2.2/ko/mod/mod_authnz_ldap.html
+ [21]: http://httpd.apache.org/docs/2.2/ko/mod/mod_authz_dbm.html
+ [22]: http://httpd.apache.org/docs/2.2/ko/mod/mod_authz_default.html
+ [23]: http://httpd.apache.org/docs/2.2/ko/mod/mod_authz_groupfile.html
+ [24]: http://httpd.apache.org/docs/2.2/ko/mod/mod_authz_host.html
+ [25]: http://httpd.apache.org/docs/2.2/ko/mod/mod_authz_owner.html
+ [26]: http://httpd.apache.org/docs/2.2/ko/mod/mod_authz_user.html
+ [27]: http://httpd.apache.org/docs/2.2/ko/mod/mod_autoindex.html
+ [28]: http://httpd.apache.org/docs/2.2/ko/mod/mod_cern_meta.html
+ [29]: http://httpd.apache.org/docs/2.2/ko/mod/mod_cgi.html
+ [30]: http://httpd.apache.org/docs/2.2/ko/mod/mod_cgid.html
+ [31]: http://httpd.apache.org/docs/2.2/ko/mod/mod_charset_lite.html
+ [32]: http://www.webdav.org/
+ [33]: http://httpd.apache.org/docs/2.2/ko/mod/mod_dav_fs.html
+ [34]: http://httpd.apache.org/docs/2.2/ko/mod/mod_dav.html
+ [35]: http://httpd.apache.org/docs/2.2/ko/mod/mod_dav_lock.html
+ [36]: http://httpd.apache.org/docs/2.2/ko/mod/mod_dbd.html
+ [37]: http://httpd.apache.org/docs/2.2/ko/mod/mod_deflate.html
+ [38]: http://httpd.apache.org/docs/2.2/ko/mod/mod_dir.html
+ [39]: http://httpd.apache.org/docs/2.2/ko/mod/mod_disk_cache.html
+ [40]: http://httpd.apache.org/docs/2.2/ko/mod/mod_dumpio.html
+ [41]: http://httpd.apache.org/docs/2.2/ko/mod/mod_env.html
+ [42]: http://httpd.apache.org/docs/2.2/ko/mod/mod_example.html
+ [43]: http://httpd.apache.org/docs/2.2/ko/mod/mod_expires.html
+ [44]: http://httpd.apache.org/docs/2.2/ko/mod/mod_ext_filter.html
+ [45]: http://httpd.apache.org/docs/2.2/ko/mod/mod_filter.html
+ [46]: http://httpd.apache.org/docs/2.2/ko/mod/mod_imagemap.html
+ [47]: http://httpd.apache.org/docs/2.2/ko/mod/mod_include.html
+ [48]: http://httpd.apache.org/docs/2.2/ko/mod/mod_info.html
+ [49]: http://httpd.apache.org/docs/2.2/ko/mod/mod_isapi.html
+ [50]: http://httpd.apache.org/docs/2.2/ko/mod/mod_log_config.html
+ [51]: http://httpd.apache.org/docs/2.2/ko/mod/mod_log_forensic.html
+ [52]: http://httpd.apache.org/docs/2.2/ko/mod/mod_logio.html
+ [53]: http://httpd.apache.org/docs/2.2/ko/mod/mod_mime.html
+ [54]: http://httpd.apache.org/docs/2.2/ko/mod/mod_mime_magic.html
+ [55]: http://httpd.apache.org/docs/2.2/ko/content-negotiation.html
+ [56]: http://httpd.apache.org/docs/2.2/ko/mod/mod_nw_ssl.html
+ [57]: http://httpd.apache.org/docs/2.2/ko/mod/mod_proxy_ajp.html
+ [58]: http://httpd.apache.org/docs/2.2/ko/mod/mod_proxy.html
+ [59]: http://httpd.apache.org/docs/2.2/ko/mod/mod_proxy_balancer.html
+ [60]: http://httpd.apache.org/docs/2.2/ko/mod/mod_proxy_connect.html
+ [61]: http://httpd.apache.org/docs/2.2/ko/mod/mod_proxy_ftp.html
+ [62]: http://httpd.apache.org/docs/2.2/ko/mod/mod_proxy_http.html
+ [63]: http://httpd.apache.org/docs/2.2/ko/mod/mod_proxy_scgi.html
+ [64]: http://httpd.apache.org/docs/2.2/ko/mod/mod_so.html
+ [65]: http://httpd.apache.org/docs/2.2/ko/mod/mod_speling.html
+ [66]: http://httpd.apache.org/docs/2.2/ko/mod/mod_ssl.html
+ [67]: http://httpd.apache.org/docs/2.2/ko/mod/mod_status.html
+ [68]: http://httpd.apache.org/docs/2.2/ko/mod/mod_substitute.html
+ [69]: http://httpd.apache.org/docs/2.2/ko/mod/mod_suexec.html
+ [70]: http://httpd.apache.org/docs/2.2/ko/mod/mod_userdir.html
+ [71]: http://httpd.apache.org/docs/2.2/ko/mod/mod_usertrack.html
+ [72]: http://httpd.apache.org/docs/2.2/ko/mod/mod_vhost_alias.html
+</dd></div>
+:ET

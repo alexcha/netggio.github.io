@@ -1,0 +1,86 @@
+I"<p>일전에 일하다 필요해서 급조로 짠 초간단 펄 스크립트..</p>
+
+<p>응용하면 쓸만한 스크립트일듯.</p>
+
+<p>=====  이하 config.ini  파일 =====<br />
+&lt;FONT color=#0000ff&gt;</p>
+
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #e4e4e4; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 10px">
+  &lt;FONT color=#0000ff&gt;[Dest_Server] <br />; 체크할 대상의 ip 설정, 대상이 여러개의 호스트일 경우 구분자는 쉼표<br />Dest_Server_IP=127.0.0.1<br />[Dest_Server_Port]<br />; 체크할 대상의 포트 설정<br />PORT=80<br />[Check_Time]<br />; 포트 체크시 타임아웃 설정<br />TIME=0.5&lt;/FONT&gt;
+</div>
+
+<p>&lt;/FONT&gt;<br />
+           </p>
+
+<p>=====   이하 Check_port.pl  파일=====<br />
+&lt;FONT color=#0000ff&gt;</p>
+
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #e4e4e4; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 10px">
+  <br /> 
+  
+  <p>
+    &lt;FONT color=#0000ff&gt;#!/usr/bin/perl &lt;/FONT&gt;
+  </p>
+  
+  <br /> 
+  
+  <p>
+    &lt;FONT color=#0000ff&gt;# by netggio<br />###&nbsp; &lt;/FONT&gt;<a href="http://netggio.pe.kr/">&lt;FONT color=#0000ff&gt;http://netggio.pe.kr&lt;/FONT&gt;</a>
+  </p>
+  
+  <br /> 
+  
+  <p>
+    &lt;FONT color=#0000ff&gt;use strict;<br />use warnings;<br />use CGI;<br />use Net::Ping;<br />use LWP::Simple;<br />use Config::IniFiles;<br />my $ip ;<br />; config.ini 파일 위치 기입<br />my $file = &#8220;/usr/local/tools/script/config.ini&#8221;;<br />my $ini = Config::IniFiles-&gt;new(<br />&nbsp; &nbsp; -file &nbsp;&nbsp; =&gt; $file<br />&nbsp; &nbsp; ) or die &#8220;Could not open $file!&#8221;;&lt;/FONT&gt;
+  </p>
+  
+  <br /> 
+  
+  <p>
+    &lt;FONT color=#0000ff&gt;my $Client_config=$ini-&gt;val(&#8216;Dest_Server&#8217;,&#8217;Dest_Server_IP&#8217; );<br />my @Dest_host=split(/,/, $Client_config);&lt;/FONT&gt;
+  </p>
+  
+  <br /> 
+  
+  <p>
+    &lt;FONT color=#0000ff&gt;my $Client_port_config=$ini-&gt;val(&#8216;Dest_Server_Port&#8217;,&#8217;PORT&#8217; );&lt;/FONT&gt;
+  </p>
+  
+  <br /> 
+  
+  <p>
+    &lt;FONT color=#0000ff&gt;my $CHECK=$ini-&gt;val(&#8216;Check_Time&#8217;,&#8217;TIME&#8217; );&lt;/FONT&gt;
+  </p>
+  
+  <br /> 
+  
+  <p>
+    <br />&lt;FONT color=#0000ff&gt;foreach my $ip (@Dest_host)&lt;/FONT&gt;
+  </p>
+  
+  <br /> 
+  
+  <p>
+    &lt;FONT color=#0000ff&gt;{<br />&nbsp; &nbsp; &nbsp; &nbsp; my $p = Net::Ping-&gt;new(&#8216;tcp&#8217;, $CHECK);<br />&nbsp; &nbsp; &nbsp; &nbsp; $p-&gt;tcp_service_check(1);<br />&nbsp; &nbsp; &nbsp; &nbsp; my $host = &#8220;$ip&#8221;;<br />&nbsp; &nbsp; &nbsp; &nbsp; $p-&gt;{&#8216;port_num&#8217;} = &#8220;$Client_port_config&#8221;;<br />&nbsp; &nbsp; &nbsp; &nbsp; print &#8220;$host &#8211;&gt; port $Client_port_config is &#8220;,&lt;/FONT&gt;
+  </p>
+  
+  <br /> 
+  
+  <p>
+    &lt;FONT color=#0000ff&gt;&nbsp; &nbsp; &nbsp;&nbsp; ($p-&gt;ping($host) ? &#8220;<b>&lt;font color=&#8217;blue&#8217;&gt;up&lt;/font color&gt;</b><br />&#8221; : &#8220;<b>&lt;font color=&#8217;red&#8217;&gt;down&lt;/font color&gt;</b><br />&#8221;);&lt;/FONT&gt;
+  </p>
+  
+  <br /> 
+  
+  <p>
+    &lt;FONT color=#0000ff&gt;}<br />&lt;/FONT&gt;<br />
+  </p>
+</div>
+
+<p>&lt;/FONT&gt;===================================</p>
+
+<p>간단 사용법<br />
+perl Check_port.pl &gt; Result.html</p>
+
+<p>html로 결과 저장됨.</p>
+:ET

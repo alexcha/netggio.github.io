@@ -1,0 +1,26 @@
+I"%<p>Xen콘솔은 xe 명령어를 기본으로 함.</p>
+
+<p>CPU타입이 다른 Xenserver Pool로 묶는 방법<br />
+xe pool-join force=true master-address=ip master-password=패스워드 master-username=root</p>
+
+<p>강제로 CPU갯수 늘리기.. ( 게스트 win인경우.. 코어 늘린만큼.. core갯수 안나옴..해서.. 보여주기식으로 늘릴수는 있다…하지만 의미 있나? ㅡ.ㅡ..)<br />
+xe vm-param-set platform:cores-per-socket=16 uuid=게스트OS UUID</p>
+
+<p>Proxy를 이용해서 게스트OS 설치 할경우 프락시 설정<br />
+xe vm-param-set uuid=게스트OS UUID other-config:install-proxy=http://프락시서버주소</p>
+
+<p>게스트OS 리스트 보기(템플릿포함)<br />
+xe vm-list</p>
+
+<p>export 하기 -&gt; (스냅샷으로 템플릿을 만든후 export해주면 됨)<br />
+xe template-export template-uuid=템플릿UUID filename=win.xva</p>
+
+<p>import 하기<br />
+xe vm-import filename=centos6.4.xva sr-uuid=스토리지 UUID</p>
+
+<p> </p>
+
+<p>Xen 프로세스 ( 리눅스 -eq  top )</p>
+
+<p>xentop -d 1</p>
+:ET

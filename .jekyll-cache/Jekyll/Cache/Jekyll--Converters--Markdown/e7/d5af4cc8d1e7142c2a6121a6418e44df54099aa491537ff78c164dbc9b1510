@@ -1,0 +1,29 @@
+I"�<p>요즘 너무 무리를 하나…  주말에 쉰거는 어디로 간간지 몸이 천근만근 ㅠㅠ</p>
+
+<p>휴가를 내고 쉬고 있다. 덕분에 집안 대청소 ㅋㅋㅋㅋ</p>
+
+<p>하드디스크도 정리를 하고 있다가 일전에 서버 뚫린거 스샷떠논게 있네.</p>
+
+<p>xxx회사 장비 봐준 내역이 ; ㅎ</p>
+
+<p>내용은 이랬다.. 자꾸 자기들 서버가 ip스캔의 근원지라고 자꾸 메일이 온단다.</p>
+
+<p>여기 회사 담당자는 netsat / top 등등 본인이 아는 상식에서 모든걸 보아도 정상아란다.</p>
+
+<p>쩝..  서버 뚫리면 보여주는 값은 변조 시켜놓을것인디 ;;;</p>
+
+<p>atop 받아다가 데몬들 상태를 보니 역시나 스캔 스크립트가 ㅎㅎㅎ</p>
+
+<p><img style="MARGIN-TOP: 0px; WIDTH: 514px; HEIGHT: 391px" alt="" onerror="if (this.src != '/skin/admin/whitedream/image/spacer.gif') { this.src='/skin/admin/whitedream/image/spacer.gif' }" src="http://blog.netggio.pe.kr/attach/1/1269191578.jpg?randseed=0.12059418484754175" width="87" height="90" /></p>
+
+<p>뭐 하는넘인지 해당 프로세스 찾아서 보아하니<br />
+<img style="MARGIN-TOP: 15px; WIDTH: 514px; HEIGHT: 276px" alt="" onerror="if (this.src != '/skin/admin/whitedream/image/spacer.gif') { this.src='/skin/admin/whitedream/image/spacer.gif' }" src="http://blog.netggio.pe.kr/attach/1/1366859231.jpg?randseed=0.6315448360668747" width="120" height="58" /></p>
+
+<p>위치가 보이네 ; ㅎ</p>
+
+<p>그런데 이 회사는 원인도 안찾고 OS재설치 해서 다시 서비스 하겠다고 했던 기역이 ㅎ.</p>
+
+<p>OS재설치는 해야겠지만.. 근본적인 이유를 찾을 생각도 않고 다시 서비스 재개 하는거 보면서 참으로.. 안습이던 기역이 ;  지금도 뚫린건 아닌지 ; ㅎ<br />
+ <br />
+사정이 있긴 하겠지만..  요즘 보면.. 무개념 탑재한 관리자들이 많다 ㅠㅠ</p>
+:ET

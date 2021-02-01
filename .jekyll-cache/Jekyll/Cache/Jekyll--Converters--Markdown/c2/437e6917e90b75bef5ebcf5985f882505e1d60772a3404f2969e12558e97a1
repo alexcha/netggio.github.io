@@ -1,0 +1,22 @@
+I"=<p>현재 폴더내의 파일이름을 모두 대문자로 바꾸는 스크립트.</p>
+
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #e4e4e4; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 10px">
+  <br /> 
+  
+  <p>
+    #! /bin/bash
+  </p>
+  
+  <br /> 
+  
+  <p>
+    for filename in *<br />do<br />&nbsp; fname=`basename $filename`<br />&nbsp; n=`echo $fname | tr A-Z a-z`<br />&nbsp; if [ &#8220;$fname&#8221; != &#8220;$n&#8221; ]<br />&nbsp; then<br />&nbsp; &nbsp; mv $fname $n<br />&nbsp; fi<br />done
+  </p>
+  
+  <br /> 
+  
+  <p>
+    exit 0
+  </p>
+</div>
+:ET

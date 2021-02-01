@@ -1,0 +1,6 @@
+I"Q<p>nc를 이용한 초간단 포트 체크</p>
+
+<div style="PADDING-BOTTOM: 10px; BACKGROUND-COLOR: #e4e4e4; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 10px">
+  /usr/bin/nc -z -w 1 google.com 80 ; { if [ &#8220;$?&#8221; -eq &#8220;0&#8221; ];&nbsp; then echo &#8220;ok&#8221;&nbsp; ;else echo &#8216;fail&#8217;; fi }
+</div>
+:ET
