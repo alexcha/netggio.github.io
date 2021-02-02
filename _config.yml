@@ -1,7 +1,7 @@
 # Site settings
 name: name
 email: email
-url: url
+url: https://netggio.pe.kr
 description: "A blog and a portfolio"
 author: "author"
 title: "BlogFolio"
@@ -10,7 +10,11 @@ baseurl: /
 
 # social
 github:
-  username: username
+  username: alexcha
+  
+plugins:
+  - jekyll-paginate-v2
+  
+pagination:
 
-twitter:
-  username: username
+  per_page: 5
