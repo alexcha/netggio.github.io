@@ -1,5 +1,0 @@
-I"�<p>[Mysql  Schema Dump ]</p>
-
-<p>Table schema Dump<br />
-mysqldump –default-character-set=캐릭터셋 -u root -p -d –opt DB명 Talbe명 &gt;  Table.dump</p>
-:ET
