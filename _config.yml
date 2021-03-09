@@ -1,30 +1,25 @@
-title: alex
-description: 
-show_downloads: true
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-baseurl: "/" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
-url: "https://netggio.pe.kr" # change this to the base hostname & protocol for your site
+# Site settings
+title: Enjoy My Life~
+description: '' # write a nice description for your blog
+baseurl: '' # the subpath of your site, e.g. /blog
+url: '' # the base hostname & protocol for your site http://www.example.com
+# google_analytics: 'UA-XXXXXX-X'
+#twitter_username: 'twitter_username'
 
+# Build settings
+markdown: kramdown
 
-google_analytics:
-
-# cayman-blog date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-cayman-blog:
-  date_format: "%b %-d, %Y"
-
-theme: # leave it empty
-
-# social
-#author: lorepirri
-#image: /thumbnail-jumbo.png
-#twitter:
-#  username: lorepirri
+permalink: '/:title/'
 
 plugins:
-  - jekyll-target-blank
+  - jekyll-paginate
 
-target-blank:
-    rel: nofollow
 
-header_page_refs: ['now', 'about', 'contact']
+paginate: 4
